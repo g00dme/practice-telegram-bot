@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - db
+      - redmine
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./app/logs:/var/log/app
+    networks:
+      - appnetwork
+
+  redmine:
+    image: redmine:latest
+    ports:
+      - "3000:3000"
+    environment:
+      REDMINE_DB_DATABASE: secretDb
+      REDMINE_DB_USERNAME: secretUser
+      REDMINE_DB_PASSWORD: secretPassword
+      REDMINE_DB_HOST: db
+    depends_on:
+      - db
+    networks:
+      - appnetwork
+
+
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: secretDb
+      POSTGRES_USER: secretUser
+      POSTGRES_PASSWORD: secretPassword
+    networks:
+      - appnetwork
+
+networks:
+  appnetwork:
+    driver: bridge
