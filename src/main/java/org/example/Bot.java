@@ -10,6 +10,7 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import java.util.HashMap;
 import java.util.Map;
 
+
 public class Bot extends TelegramLongPollingBot {
     Map<String, Long> map = new HashMap<>();
     long chatIdAdmin = 5355357934L;
