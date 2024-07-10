@@ -12,10 +12,11 @@ public class Main {
         redmine.get_difference();
         System.out.println("differences: "+redmine.diff);
         System.out.println("old issues: "+ redmine.diff_old);
+        System.out.println("close to deadline "+ redmine.diff_deadlines);
     }
     public static void main(String[] args) {
         ScheduledExecutorService executorService;
         executorService = Executors.newSingleThreadScheduledExecutor();
-        executorService.scheduleAtFixedRate(Main::repeat, 0, 1, TimeUnit.MINUTES);
+        executorService.scheduleAtFixedRate(Main::repeat, 0, 15, TimeUnit.SECONDS);
     }
 }

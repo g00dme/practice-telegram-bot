@@ -22,6 +22,11 @@ public class RedmineBot {
     ArrayList<ArrayList<Object>> new_old_issue;
     ArrayList<ArrayList<Object>> diff_old;
 
+    ArrayList<ArrayList<Object>> dealines=new ArrayList<>();
+    ArrayList<ArrayList<Object>> new_dealines;
+    ArrayList<ArrayList<Object>> diff_deadlines;
+
+
 
 
     RedmineBot(String url, String api) {
@@ -56,6 +61,7 @@ public class RedmineBot {
             singleList.add(issue.getAuthorId());
             singleList.add(get_email(issue.getAuthorId()));
             singleList.add(issue.getUpdatedOn());
+            singleList.add(issue.getDueDate());
 
             all.add(singleList);
         }
@@ -64,6 +70,9 @@ public class RedmineBot {
     }
 
     public static long getDateDiff(Date date1, Date date2, TimeUnit timeUnit) {
+        if (date1== null || date2 == null) {
+            return 9_999_999_999_999L;
+        }
         long diffInMillies = date2.getTime() - date1.getTime();
         return timeUnit.convert(diffInMillies,TimeUnit.MILLISECONDS);
     }
@@ -71,11 +80,12 @@ public class RedmineBot {
     void check_old () {
         ArrayList<ArrayList<Object>> old = new ArrayList<>();
         for (ArrayList<Object> issue :this.now_all)  {
-            if (7 <= getDateDiff((Date) issue.getLast(), new Date(), TimeUnit.MINUTES)) {
+            if (7 <= getDateDiff((Date) issue.get(7), new Date(), TimeUnit.DAYS)) {
                 old.add(issue);
             }
-        this.new_old_issue=old;
         }
+        this.new_old_issue=old;
+
     }
 
     String get_email(Integer id)  {
@@ -90,9 +100,20 @@ public class RedmineBot {
         return email;
     }
 
+    void check_deadline () {
+        ArrayList<ArrayList<Object>> old = new ArrayList<>();
+        for (ArrayList<Object> issue :this.now_all)  {
+            if (2 >= getDateDiff( new Date(), (Date) issue.get(8), TimeUnit.DAYS)) {
+                old.add(issue);
+            }
+        }
+        this.new_dealines=old;
+    }
+
     void get_difference () {
         this.now_all=get_all_issue();
         check_old();
+        check_deadline();
 
         ArrayList<ArrayList<Object>> diff_old=new ArrayList<>();
         diff_old.addAll(this.new_old_issue);
@@ -101,6 +122,7 @@ public class RedmineBot {
         this.diff_old=diff_old;
         this.old_issue=new_old_issue;
 
+
         ArrayList<ArrayList<Object>> diff=new ArrayList<>();
 
         diff.addAll(this.now_all);
@@ -108,5 +130,16 @@ public class RedmineBot {
         diff.removeAll(this.old_all);
         this.old_all=this.now_all;
         this.diff=diff;
+
+
+        ArrayList<ArrayList<Object>> diff_deadline=new ArrayList<>();
+        diff_deadline.addAll(this.new_dealines);
+
+        diff_deadline.removeAll(this.dealines);
+        diff_deadline.removeAll(diff);
+
+        this.diff_deadlines=diff_deadline;
+        this.dealines=new_dealines;
+
     }
 }
