@@ -7,12 +7,13 @@ import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 
 public class Bot extends TelegramLongPollingBot {
-    Map<String, Long> map = new HashMap<>();
+    static Map<String, Long> map = new HashMap<>();
     long chatIdAdmin = 5355357934L;
 
     private static final Logger LOG = LoggerFactory.getLogger(Bot.class);
@@ -80,7 +81,7 @@ public class Bot extends TelegramLongPollingBot {
 
         LOG.info("Ответ на команду /start");
     }
-    private void sendMessage(long chatId, String textToSend) throws TelegramApiException{
+    public void sendMessage(long chatId, String textToSend) throws TelegramApiException{
         SendMessage message = new SendMessage();
         message.setChatId(String.valueOf(chatId));
         message.setText(textToSend);
@@ -92,4 +93,10 @@ public class Bot extends TelegramLongPollingBot {
         }
 
     }
+    static Map<String, Long> getMap(){
+        Map<String, Long> botmap = new HashMap<>();
+        botmap.putAll(map);
+        return botmap;
+    }
+
 }

@@ -58,7 +58,7 @@
             <DefaultRolloverStrategy max="10">
                 <Delete basePath="${APP_LOG_ROOT}" maxDepth="10">
                     <!-- Delete all files older than 7 days -->
-                    <IfLastModified age="7d" />
+                    <IfLastModified age="5m" />
                 </Delete>
             </DefaultRolloverStrategy>
         </RollingFile>
