@@ -4,7 +4,6 @@ import org.telegram.telegrambots.meta.TelegramBotsApi;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 
-import java.util.Map;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.Executors;
@@ -19,7 +18,6 @@ public class Main {
 
 
     public static void repeat(){
-//        Bot bot = new Bot();                       //TODO можно убрать
         System.out.println(new java.util.Date());
         System.out.println(Bot.map);
         System.out.println("Обновлённые задачи задачи\n"+Liist.differences());
