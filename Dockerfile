@@ -6,4 +6,4 @@ WORKDIR /app
 COPY pom.xml .
 COPY src ./src
 RUN mvn clean install
-CMD ["java", "-jar", "target/myapp-1.0-SNAPSHOT.jar"]
+CMD ["java", "-jar", "target/Logg-1.0-SNAPSHOT.jar"]
