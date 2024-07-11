@@ -5,6 +5,8 @@ import java.util.Date;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
+import com.taskadapter.redmineapi.RedmineException;
+
 
 import static com.practice.bot.IssueProcessing.issueProcessing;
 
@@ -13,7 +15,6 @@ public class Main {
     static final long CHAT_ID_ADMIN = 5355357934L;
 
     public static void repeat() {
-
         System.out.println(new Date());
         redmine.get_difference();
         System.out.println("differences: "+redmine.diff);

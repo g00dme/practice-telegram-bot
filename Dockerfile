@@ -4,6 +4,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 WORKDIR /app
 COPY pom.xml .
+RUN mvn dependency:go-offline
 COPY src ./src
 RUN mvn clean install
 CMD ["java", "-jar", "target/Logg-1.0-SNAPSHOT.jar"]
