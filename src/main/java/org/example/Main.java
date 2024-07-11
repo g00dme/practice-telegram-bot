@@ -4,7 +4,6 @@ import org.telegram.telegrambots.meta.TelegramBotsApi;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 
-import java.util.ArrayList;
 import java.util.Map;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -20,26 +19,26 @@ public class Main {
 
 
     public static void repeat(){
-        Bot bot = new Bot();
+//        Bot bot = new Bot();                       //TODO можно убрать
         System.out.println(new java.util.Date());
         System.out.println(Bot.map);
         System.out.println("Обновлённые задачи задачи\n"+Liist.differences());
         System.out.println("Задачи с просроченным комментарием\n"+Liist.oldIssues());
         System.out.println("Сгорающие задачи\n"+Liist.closeToDeadline());
 
-        try {
-            bot.sendMessage(CHAT_ID_ADMIN,"проверка");
-        } catch (TelegramApiException e) {
-            throw new RuntimeException(e);
-        }
+//        try {                                                       //TODO можно убрать
+//            bot.sendMessage(CHAT_ID_ADMIN,"проверка");
+//        } catch (TelegramApiException e) {
+//            throw new RuntimeException(e);
+//        }
         issueProcessing(Liist.differences(),Liist.oldIssues(),Liist.closeToDeadline());
     }
 
-    static class AliveTask extends TimerTask {
-        public void run() {
-            repeat(); // Вызываем метод из таймера
-        }
-    }
+//    static class AliveTask extends TimerTask {
+//        public void run() {
+//            repeat(); // Вызываем метод из таймера
+//        }
+//    }
 
 
     public static void main(String[] args) {
@@ -52,11 +51,11 @@ public class Main {
             e.printStackTrace();
         }
 
-//        ScheduledExecutorService executorService;
-//        executorService = Executors.newSingleThreadScheduledExecutor();
-//        executorService.scheduleAtFixedRate(Main::repeat, 0, 1, TimeUnit.MINUTES);
+        ScheduledExecutorService executorService;
+        executorService = Executors.newSingleThreadScheduledExecutor();
+        executorService.scheduleAtFixedRate(Main::repeat, 0, 1, TimeUnit.MINUTES);
 
-        Timer timer = new Timer();
-        timer.schedule(new AliveTask(), 0, 60000); //в миллисекундах
+//        Timer timer = new Timer();                       //TODO под вариант таймера, можно убрать
+//        timer.schedule(new AliveTask(), 0, 60000); //в миллисекундах
     }
 }

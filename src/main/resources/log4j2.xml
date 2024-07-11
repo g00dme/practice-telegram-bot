@@ -20,13 +20,17 @@
             <LevelRangeFilter minLevel="WARN" maxLevel="WARN" onMatch="ACCEPT" onMismatch="DENY"/>
             <PatternLayout pattern="${LOG_PATTERN}"/>
             <Policies>
+                <!-- конфигурационный файл перепроверяет логи и выполняет соответствующие действия раз в 1 час, обязательно
+                при использовании удаления по сроку существования файла логирования-->
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
                 <!-- Максимальное размер файлов -->
                 <SizeBasedTriggeringPolicy size="10MB" />
             </Policies>
             <!-- Максимальное количество файлов, создаваемых за один день -->
             <DefaultRolloverStrategy max="10">
-                <Delete basePath="${APP_LOG_ROOT}" maxDepth="10">
-                    <!-- Delete all files older than 7 days -->
+                <!-- уровни папок в которых конфигурационный файл будет искать логи, 1 - текущая, самая внутренняя папка -->
+                <Delete basePath="${APP_LOG_ROOT}" maxDepth="2">
+                    <!-- Delete all files older than 7 days, можно использовать минуты 30m -->
                     <IfLastModified age="7d" />
                 </Delete>
             </DefaultRolloverStrategy>
@@ -38,10 +42,11 @@
             <LevelRangeFilter minLevel="DEBUG" maxLevel="DEBUG" onMatch="ACCEPT" onMismatch="DENY"/>
             <PatternLayout pattern="${LOG_PATTERN}"/>
             <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
                 <SizeBasedTriggeringPolicy size="10MB" />
             </Policies>
             <DefaultRolloverStrategy max="10">
-                <Delete basePath="${APP_LOG_ROOT}" maxDepth="10">
+                <Delete basePath="${APP_LOG_ROOT}" maxDepth="2">
                     <!-- Delete all files older than 7 days -->
                     <IfLastModified age="7d" />
                 </Delete>
@@ -53,12 +58,13 @@
             <LevelRangeFilter minLevel="INFO" maxLevel="INFO" onMatch="ACCEPT" onMismatch="DENY"/>
             <PatternLayout pattern="${LOG_PATTERN}"/>
             <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
                 <SizeBasedTriggeringPolicy size="10MB" />
             </Policies>
             <DefaultRolloverStrategy max="10">
-                <Delete basePath="${APP_LOG_ROOT}" maxDepth="10">
+                <Delete basePath="${APP_LOG_ROOT}" maxDepth="2">
                     <!-- Delete all files older than 7 days -->
-                    <IfLastModified age="5m" />
+                    <IfLastModified age="7d" />
                 </Delete>
             </DefaultRolloverStrategy>
         </RollingFile>
@@ -68,10 +74,11 @@
             <LevelRangeFilter minLevel="ERROR" maxLevel="ERROR" onMatch="ACCEPT" onMismatch="DENY"/>
             <PatternLayout pattern="${LOG_PATTERN}"/>
             <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
                 <SizeBasedTriggeringPolicy size="10MB" />
             </Policies>
             <DefaultRolloverStrategy max="10">
-                <Delete basePath="${APP_LOG_ROOT}" maxDepth="10">
+                <Delete basePath="${APP_LOG_ROOT}" maxDepth="2">
                     <!-- Delete all files older than 7 days -->
                     <IfLastModified age="7d" />
                 </Delete>
@@ -83,33 +90,28 @@
                      filePattern="${APP_LOG_ROOT}/app-trace-%d{yyyy-MM-dd}-%i.log" >
             <PatternLayout pattern="${LOG_PATTERN}"/>
             <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
                 <SizeBasedTriggeringPolicy size="10MB" />
             </Policies>
             <DefaultRolloverStrategy max="1">
-                <Delete basePath="${APP_LOG_ROOT}" maxDepth="1">
+                <Delete basePath="${APP_LOG_ROOT}" maxDepth="2">
                     <!-- Delete all files older than 7 days -->
                     <IfLastModified age="7d" />
                 </Delete>
             </DefaultRolloverStrategy>
         </RollingFile>
 
-
     </Appenders>
 
     <Loggers>
 
-        <Logger name="org.example" additivity="false" level="info">
+        <Root level="info">
+            <AppenderRef ref="Console"/>
             <AppenderRef ref="errorLog"/>
             <AppenderRef ref="infoLog"/>
             <AppenderRef ref="warnLog"/>
-            <AppenderRef ref="debugLog"/>
-        </Logger>
-
-        <Root level="info">
-            <AppenderRef ref="Console"/>
         </Root>
 
     </Loggers>
 
 </Configuration>
-
