@@ -1,13 +1,13 @@
 package com.practice.bot;
 
+import com.taskadapter.redmineapi.Include;
 import com.taskadapter.redmineapi.RedmineException;
 import com.taskadapter.redmineapi.RedmineManager;
 import com.taskadapter.redmineapi.RedmineManagerFactory;
 import com.taskadapter.redmineapi.bean.Issue;
+import com.taskadapter.redmineapi.bean.Journal;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 public class RedmineBot {
@@ -43,6 +43,24 @@ public class RedmineBot {
         return mgr;
     }
 
+    Date get_note_date(Issue issue) {
+        try {
+            Collection<Journal> journals = this.mgr.getIssueManager().getIssueById(issue.getId(), Include.journals).getJournals();
+            List<Journal> data =journals.stream().toList();
+
+            ArrayList<Date> list=new ArrayList<>();
+            for (Journal dat : journals.stream().toList()) {
+                list.add(dat.getCreatedOn());
+            }
+            Collections.sort(list);
+            Date date = list.getLast();
+            return date;
+        } catch (RedmineException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
     ArrayList<ArrayList<Object>> get_all_issue () {
         List<Issue> issues;
         try {
@@ -62,6 +80,7 @@ public class RedmineBot {
             singleList.add(get_email(issue.getAuthorId()));
             singleList.add(issue.getUpdatedOn());
             singleList.add(issue.getDueDate());
+            singleList.add(get_note_date(issue));
 
             all.add(singleList);
         }
@@ -80,7 +99,7 @@ public class RedmineBot {
     void check_old () {
         ArrayList<ArrayList<Object>> old = new ArrayList<>();
         for (ArrayList<Object> issue :this.now_all)  {
-            if (7 <= getDateDiff((Date) issue.get(7), new Date(), TimeUnit.DAYS)) {
+            if (7 <= getDateDiff((Date) issue.get(9), new Date(), TimeUnit.DAYS)) {
                 old.add(issue);
             }
         }
