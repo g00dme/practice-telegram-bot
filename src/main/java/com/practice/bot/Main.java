@@ -19,7 +19,6 @@ public class Main {
     public static void main(String[] args) {
         ScheduledExecutorService executorService;
         executorService = Executors.newSingleThreadScheduledExecutor();
-        executorService.scheduleAtFixedRate(Main::repeat, 0, 5, TimeUnit.MINUTES);
-
+        executorService.scheduleAtFixedRate(Main::repeat, 0, 30, TimeUnit.SECONDS);
     }
 }
