@@ -9,7 +9,7 @@ public class IssueProcessing {
     public static void issueProcessing(ArrayList<ArrayList<Object>> diff,ArrayList<ArrayList<Object>> old,ArrayList<ArrayList<Object>> close){
         Bot bot = new Bot();
 
-        if(LocalTime.now().isAfter(LocalTime.parse("09:00")) && LocalTime.now().isBefore(LocalTime.parse("18:00"))) {
+        if(LocalTime.now().isAfter(LocalTime.parse("09:00")) && LocalTime.now().isBefore(LocalTime.parse("22:00"))) {
             for (int i = 0; i < diff.size(); i++) {
                 try {
                     if (Bot.map.get(diff.get(i).get(3)) != null) {
