@@ -132,7 +132,8 @@ public class RedmineBot {
     void check_deadline () {
         ArrayList<ArrayList<Object>> old = new ArrayList<>();
         for (ArrayList<Object> issue :this.now_all)  {
-            if (2 >= getDateDiff( new Date(), (Date) issue.get(8), TimeUnit.DAYS)) {
+            if ((2 >= getDateDiff( new Date(), (Date) issue.get(8), TimeUnit.DAYS)) &&
+                    (getDateDiff( new Date(), (Date) issue.get(8), TimeUnit.DAYS) >=0)) {
                 old.add(issue);
             }
         }
