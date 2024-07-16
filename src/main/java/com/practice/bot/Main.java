@@ -11,7 +11,7 @@ import com.taskadapter.redmineapi.RedmineException;
 import static com.practice.bot.IssueProcessing.issueProcessing;
 
 public class Main {
-    static RedmineBot redmine = new RedmineBot("http://redmine:3000","d8d70e4791fad295441a647234b245234abd7cc2");
+    static RedmineBot redmine = new RedmineBot("http://redmine:3000","https://hosting228","d8d70e4791fad295441a647234b245234abd7cc2");
     static final long CHAT_ID_ADMIN = 5355357934L;
 
     public static void repeat() {
@@ -21,7 +21,6 @@ public class Main {
         System.out.println("old issues: "+ redmine.diff_old);
         System.out.println("close to deadline "+ redmine.diff_deadlines);
         issueProcessing(redmine.diff,redmine.diff_old,redmine.diff_deadlines);
-
     }
     public static void main(String[] args) {
         Bot.map.put("leonidchr@mail.ru", CHAT_ID_ADMIN);

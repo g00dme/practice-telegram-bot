@@ -15,6 +15,7 @@ public class RedmineBot {
     RedmineManager mgr;
     String url;
     String api;
+    String ext_url;
     ArrayList<ArrayList<Object>> old_all;
     ArrayList<ArrayList<Object>> now_all;
     ArrayList<ArrayList<Object>> diff;
@@ -30,9 +31,10 @@ public class RedmineBot {
 
 
 
-    RedmineBot(String url, String api) {
+    RedmineBot(String url,String ext_url, String api) {
         this.url=url;
         this.api=api;
+        this.ext_url=ext_url;
 
         this.mgr=create_connection();
         this.old_all=get_all_issue();
@@ -89,6 +91,7 @@ public class RedmineBot {
             singleList.add(issue.getDueDate());
             singleList.add(get_note_date(issue));
             singleList.add(issue.getId());
+            singleList.add(this.ext_url+"/projects/"+issue.getProjectName());
 
             all.add(singleList);
         }
