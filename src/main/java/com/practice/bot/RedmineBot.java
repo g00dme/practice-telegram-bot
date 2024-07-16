@@ -16,10 +16,10 @@ public class RedmineBot {
     String url;
     String api;
     String ext_url;
-    Hashtable<String, String> links;
+    static Hashtable<String, String> links;    //стал static
 
     ArrayList<ArrayList<Object>> old_all;
-    ArrayList<ArrayList<Object>> now_all;
+    static ArrayList<ArrayList<Object>> now_all;  //стал static
     ArrayList<ArrayList<Object>> diff;
 
     ArrayList<ArrayList<Object>> old_issue=new ArrayList<>();
@@ -97,6 +97,7 @@ public class RedmineBot {
             singleList.add(get_note_date(issue));
             singleList.add(issue.getId());
             singleList.add(this.ext_url+"/projects/"+issue.getProjectName());
+            singleList.add(issue.getCreatedOn());
 
             all.add(singleList);
         }
@@ -179,6 +180,5 @@ public class RedmineBot {
 
         this.diff_deadlines = diff_deadline;
         this.dealines = new_dealines;
-
     }
 }

@@ -13,6 +13,7 @@ import static com.practice.bot.IssueProcessing.issueProcessing;
 public class Main {
     static RedmineBot redmine = new RedmineBot("http://redmine:3000","https://hosting228","d8d70e4791fad295441a647234b245234abd7cc2");
     static final long CHAT_ID_ADMIN = 5355357934L;
+    static final String EMAIL_ADMIN = "leonidchr@mail.ru";
 
     public static void repeat() {
         System.out.println(new Date());
@@ -24,7 +25,7 @@ public class Main {
         issueProcessing(redmine.diff,redmine.diff_old,redmine.diff_deadlines);
     }
     public static void main(String[] args) {
-        Bot.map.put("leonidchr@mail.ru", CHAT_ID_ADMIN);
+        Bot.users.put(EMAIL_ADMIN, CHAT_ID_ADMIN);
         ScheduledExecutorService executorService;
         executorService = Executors.newSingleThreadScheduledExecutor();
         executorService.scheduleAtFixedRate(Main::repeat, 0, 5, TimeUnit.MINUTES);

@@ -9,12 +9,14 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import java.util.HashMap;
 import java.util.Map;
 
+import static com.practice.bot.Main.CHAT_ID_ADMIN;
+import static com.practice.bot.RedmineBot.now_all;
+
 
 public class Bot extends TelegramLongPollingBot {
-    static Map<String, Long> map = new HashMap<>();
-
-
+    static Map<String, Long> users = new HashMap<>();
     private static final Logger LOG = LoggerFactory.getLogger(Bot.class);
+
 
     @Override
     public String getBotUsername() {
@@ -34,34 +36,84 @@ public class Bot extends TelegramLongPollingBot {
             long chatId = update.getMessage().getChatId();
             switch (messageText){
                 case "/start":
-                    if (!map.containsValue(update.getMessage().getChatId())) {
+                    if (!users.containsValue(chatId)) {
                         startCommandReceived(chatId, update.getMessage().getChat().getFirstName());
+                        break;
                     } else {
-                        String text = "Ты тупой? Ты уже авторизован";
                         try {
-                            sendMessage(chatId,text);
+                            sendMessage(chatId, "Вы уже авторизованы");
+                            break;
+                        } catch (TelegramApiException e) {
+                            LOG.error("Не удалось отправить сообщение пользователю");
+                        }
+                    }
+                case "/enable":
+                    if (chatId == CHAT_ID_ADMIN) {
+                        try {
+                            IssueProcessing.notificationsEnabled = true;
+                            sendMessage(chatId, "Уведомления включены");
+                            break;
+                        } catch (TelegramApiException e) {
+                            LOG.error("Не удалось отправить сообщение пользователю");
+                        }
+                    }
+                case "/disable":
+                    if(chatId == CHAT_ID_ADMIN){
+                        try {
+                            IssueProcessing.notificationsEnabled = false;
+                            sendMessage(chatId,"Уведомления отключены");
+                            break;
                         } catch (TelegramApiException e) {
                             LOG.error("Не удалось отправить сообщение пользователю");
                         }
                     }
                 default:{
-                    if (update.getMessage().getText().startsWith("Моя почта")){
-                        if (map.get(update.getMessage().getText().substring(10).trim())!=null){
-                            String text = "Извините, пользователь с такой почтой уже зарегистрирован или авторизован";
+                    if (messageText.startsWith("Моя почта")){
+                        if (users.get(messageText.substring(10).trim())!=null){
                             try {
-                                sendMessage(chatId,text);
+                                sendMessage(chatId,"Извините, пользователь с такой почтой уже зарегистрирован");
                             } catch (TelegramApiException e) {
                                 LOG.error("Не удалось отправить сообщение пользователю");
                             }
                         }else {
-                            map.put(update.getMessage().getText().substring(10).trim(),update.getMessage().getChatId());
-                            String text = "Почта успешно получена, ожидайте уведомлений";
+                            users.put(messageText.substring(10).trim(),chatId); //todo добавить проверку правильности написания почты
                             try {
-                                sendMessage(update.getMessage().getChatId(),text);
+                                sendMessage(chatId,"Регистрация прошла успешно, ожидайте уведомлений");
                             } catch (TelegramApiException e) {
                                 LOG.error("Не удалось отправить сообщение пользователю");
                             }
-                            System.out.println(map);
+                        }
+                    }
+                    if(messageText.startsWith("Проект")){
+                        String projectName = messageText.substring(7).trim();
+                        if (RedmineBot.links.containsKey(projectName)){
+                            try {
+                                sendMessage(chatId,"Ссылка на проект " + projectName + " " + RedmineBot.links.get(projectName));
+                            } catch (TelegramApiException e) {
+                                throw new RuntimeException(e);
+                            }
+                        } else{
+                            try {
+                                sendMessage(chatId,"Проект с таким названием не найден");
+                            } catch (TelegramApiException e) {
+                                throw new RuntimeException(e);
+                            }
+                        }
+                    }
+                    if (chatId == CHAT_ID_ADMIN && messageText.startsWith("Задачи пользователя")){
+                        String userEmail = messageText.substring(20).trim();
+
+                        for (int i=0; i < now_all.size(); i++){
+                            try {
+                                String allIssueUser = (String) now_all.get(i).get(3);
+                                if (allIssueUser.equals(userEmail)) {
+                                    String text = " Название задачи: %s\n дата создания: $s\n приоритет: %s\n ответственные за исполнение: %s,\n задачу зарегистрировал: %s\n дата последнего коментария: %s";
+                                    String formatText = String.format(text, now_all.get(i).get(0),now_all.get(i).get(12), now_all.get(i).get(1), now_all.get(i).get(2), now_all.get(i).get(4), now_all.get(i).get(9));
+                                    sendMessage(chatId, formatText);
+                                }
+                            } catch (TelegramApiException e) {
+                                throw new RuntimeException(e);
+                            }
                         }
                     }
                 }
@@ -90,12 +142,6 @@ public class Bot extends TelegramLongPollingBot {
         } catch (TelegramApiException e) {
             LOG.error("Не получилось сформировать ответ пользователю");
         }
-    }
-
-    static Map<String, Long> getMap(){
-        Map<String, Long> botmap = new HashMap<>();
-        botmap.putAll(map);
-        return botmap;
     }
 
 }
