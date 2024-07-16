@@ -16,6 +16,8 @@ public class RedmineBot {
     String url;
     String api;
     String ext_url;
+    Hashtable<String, String> links;
+
     ArrayList<ArrayList<Object>> old_all;
     ArrayList<ArrayList<Object>> now_all;
     ArrayList<ArrayList<Object>> diff;
@@ -69,11 +71,14 @@ public class RedmineBot {
 
     ArrayList<ArrayList<Object>> get_all_issue () {
         List<Issue> issues = new ArrayList<>(List.of());
+        Hashtable<String, String> links = new Hashtable<>();
         try {
             for (Project project : this.mgr.getProjectManager().getProjects()) {
                 List<Issue> lissues = mgr.getIssueManager().getIssues(project.getName(), null);
+                links.put(project.getName(),this.ext_url+"/projects/"+project.getName());
                 issues.addAll(lissues);
             }
+            this.links=links;
         } catch (RedmineException e) {
             throw new RuntimeException(e);
         }

@@ -17,6 +17,7 @@ public class Main {
     public static void repeat() {
         System.out.println(new Date());
         redmine.get_difference();
+        System.out.println(redmine.links);
         System.out.println("differences: "+redmine.diff);
         System.out.println("old issues: "+ redmine.diff_old);
         System.out.println("close to deadline "+ redmine.diff_deadlines);
