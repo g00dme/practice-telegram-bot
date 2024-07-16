@@ -88,6 +88,7 @@ public class RedmineBot {
             singleList.add(issue.getUpdatedOn());
             singleList.add(issue.getDueDate());
             singleList.add(get_note_date(issue));
+            singleList.add(issue.getId());
 
             all.add(singleList);
         }
