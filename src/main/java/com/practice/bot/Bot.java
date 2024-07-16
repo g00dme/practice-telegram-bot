@@ -17,7 +17,6 @@ public class Bot extends TelegramLongPollingBot {
     static Map<String, Long> users = new HashMap<>();
     private static final Logger LOG = LoggerFactory.getLogger(Bot.class);
 
-
     @Override
     public String getBotUsername() {
         return "RedmineMessage_bot";

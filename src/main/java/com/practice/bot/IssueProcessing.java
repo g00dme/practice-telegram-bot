@@ -8,6 +8,7 @@ public class IssueProcessing {
 
     public static boolean notificationsEnabled = true;
 
+
     public static void issueProcessing(ArrayList<ArrayList<Object>> diff,ArrayList<ArrayList<Object>> old,ArrayList<ArrayList<Object>> close){
         Bot bot = new Bot();
 

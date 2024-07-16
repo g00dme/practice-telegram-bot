@@ -31,8 +31,6 @@ public class RedmineBot {
     ArrayList<ArrayList<Object>> diff_deadlines;
 
 
-
-
     RedmineBot(String url,String ext_url, String api) {
         this.url=url;
         this.api=api;

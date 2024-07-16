@@ -15,6 +15,7 @@ public class Main {
     static final long CHAT_ID_ADMIN = 5355357934L;
     static final String EMAIL_ADMIN = "leonidchr@mail.ru";
 
+
     public static void repeat() {
         System.out.println(new Date());
         redmine.get_difference();
