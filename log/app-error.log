@@ -1,0 +1,40 @@
+17:02:14.786 [RedmineMessage_bot Telegram Connection] ERROR org.telegram.telegrambots.updatesreceivers.DefaultBotSession - Error getting updates: [409] Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Error getting updates: [409] Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+	at org.telegram.telegrambots.meta.api.methods.updates.GetUpdates.deserializeResponse(GetUpdates.java:93) ~[telegrambots-meta-5.3.0.jar:?]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.getUpdatesFromServer(DefaultBotSession.java:260) ~[telegrambots-5.3.0.jar:?]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.run(DefaultBotSession.java:189) ~[telegrambots-5.3.0.jar:?]
+17:02:18.913 [RedmineMessage_bot Telegram Connection] ERROR org.telegram.telegrambots.updatesreceivers.DefaultBotSession - Error getting updates: [409] Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Error getting updates: [409] Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+	at org.telegram.telegrambots.meta.api.methods.updates.GetUpdates.deserializeResponse(GetUpdates.java:93) ~[telegrambots-meta-5.3.0.jar:?]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.getUpdatesFromServer(DefaultBotSession.java:260) ~[telegrambots-5.3.0.jar:?]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.run(DefaultBotSession.java:189) ~[telegrambots-5.3.0.jar:?]
+17:02:23.030 [RedmineMessage_bot Telegram Connection] ERROR org.telegram.telegrambots.updatesreceivers.DefaultBotSession - Error getting updates: [409] Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Error getting updates: [409] Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+	at org.telegram.telegrambots.meta.api.methods.updates.GetUpdates.deserializeResponse(GetUpdates.java:93) ~[telegrambots-meta-5.3.0.jar:?]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.getUpdatesFromServer(DefaultBotSession.java:260) ~[telegrambots-5.3.0.jar:?]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.run(DefaultBotSession.java:189) ~[telegrambots-5.3.0.jar:?]
+17:02:27.146 [RedmineMessage_bot Telegram Connection] ERROR org.telegram.telegrambots.updatesreceivers.DefaultBotSession - Error getting updates: [409] Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Error getting updates: [409] Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+	at org.telegram.telegrambots.meta.api.methods.updates.GetUpdates.deserializeResponse(GetUpdates.java:93) ~[telegrambots-meta-5.3.0.jar:?]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.getUpdatesFromServer(DefaultBotSession.java:260) ~[telegrambots-5.3.0.jar:?]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.run(DefaultBotSession.java:189) ~[telegrambots-5.3.0.jar:?]
+17:02:31.269 [RedmineMessage_bot Telegram Connection] ERROR org.telegram.telegrambots.updatesreceivers.DefaultBotSession - Error getting updates: [409] Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Error getting updates: [409] Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+	at org.telegram.telegrambots.meta.api.methods.updates.GetUpdates.deserializeResponse(GetUpdates.java:93) ~[telegrambots-meta-5.3.0.jar:?]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.getUpdatesFromServer(DefaultBotSession.java:260) ~[telegrambots-5.3.0.jar:?]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.run(DefaultBotSession.java:189) ~[telegrambots-5.3.0.jar:?]
+17:02:35.385 [RedmineMessage_bot Telegram Connection] ERROR org.telegram.telegrambots.updatesreceivers.DefaultBotSession - Error getting updates: [409] Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Error getting updates: [409] Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+	at org.telegram.telegrambots.meta.api.methods.updates.GetUpdates.deserializeResponse(GetUpdates.java:93) ~[telegrambots-meta-5.3.0.jar:?]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.getUpdatesFromServer(DefaultBotSession.java:260) ~[telegrambots-5.3.0.jar:?]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.run(DefaultBotSession.java:189) ~[telegrambots-5.3.0.jar:?]
+17:02:39.503 [RedmineMessage_bot Telegram Connection] ERROR org.telegram.telegrambots.updatesreceivers.DefaultBotSession - Error getting updates: [409] Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Error getting updates: [409] Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+	at org.telegram.telegrambots.meta.api.methods.updates.GetUpdates.deserializeResponse(GetUpdates.java:93) ~[telegrambots-meta-5.3.0.jar:?]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.getUpdatesFromServer(DefaultBotSession.java:260) ~[telegrambots-5.3.0.jar:?]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.run(DefaultBotSession.java:189) ~[telegrambots-5.3.0.jar:?]
+17:02:43.622 [RedmineMessage_bot Telegram Connection] ERROR org.telegram.telegrambots.updatesreceivers.DefaultBotSession - Error getting updates: [409] Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Error getting updates: [409] Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+	at org.telegram.telegrambots.meta.api.methods.updates.GetUpdates.deserializeResponse(GetUpdates.java:93) ~[telegrambots-meta-5.3.0.jar:?]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.getUpdatesFromServer(DefaultBotSession.java:260) ~[telegrambots-5.3.0.jar:?]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.run(DefaultBotSession.java:189) ~[telegrambots-5.3.0.jar:?]

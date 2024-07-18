@@ -1,0 +1,8 @@
+16:01:29.202 [RedmineMessage_bot Telegram Executor] INFO  com.practice.bot.Bot - Ответ на команду /start
+16:07:37.523 [RedmineMessage_bot Telegram Executor] INFO  com.practice.bot.Bot - Ответ на команду /start
+16:20:48.290 [main] INFO  org.apache.http.impl.client.DefaultHttpClient - I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {}->http://localhost:3000: The target server failed to respond
+16:20:48.292 [main] INFO  org.apache.http.impl.client.DefaultHttpClient - Retrying request to {}->http://localhost:3000
+16:20:48.293 [main] INFO  org.apache.http.impl.client.DefaultHttpClient - I/O exception (java.net.SocketException) caught when processing request to {}->http://localhost:3000: Connection reset
+16:20:48.293 [main] INFO  org.apache.http.impl.client.DefaultHttpClient - Retrying request to {}->http://localhost:3000
+16:20:48.294 [main] INFO  org.apache.http.impl.client.DefaultHttpClient - I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {}->http://localhost:3000: The target server failed to respond
+16:20:48.295 [main] INFO  org.apache.http.impl.client.DefaultHttpClient - Retrying request to {}->http://localhost:3000

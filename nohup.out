@@ -1,0 +1,351 @@
+[I 2024-07-07 12:14:50.329 ServerApp] Package jupyterlab took 0.0000s to import
+[I 2024-07-07 12:14:50.568 ServerApp] Package aext_assistant took 0.2388s to import
+[I 2024-07-07 12:14:50.570 ServerApp] Package aext_core took 0.0021s to import
+[I 2024-07-07 12:14:50.584 ServerApp] ****************** ENVIRONMENT Environment.PRODUCTION ******************
+[I 2024-07-07 12:14:50.586 ServerApp] ****************** ENVIRONMENT Environment.PRODUCTION ******************
+[I 2024-07-07 12:14:50.587 ServerApp] Package aext_panels took 0.0169s to import
+[I 2024-07-07 12:14:50.589 ServerApp] Package aext_share_notebook took 0.0019s to import
+[I 2024-07-07 12:14:50.605 ServerApp] Package jupyter_lsp took 0.0157s to import
+[W 2024-07-07 12:14:50.605 ServerApp] A `_jupyter_server_extension_points` function was not found in jupyter_lsp. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2024-07-07 12:14:50.613 ServerApp] Package jupyter_server_terminals took 0.0072s to import
+[I 2024-07-07 12:14:50.613 ServerApp] Package notebook took 0.0000s to import
+[I 2024-07-07 12:14:50.615 ServerApp] Package notebook_shim took 0.0000s to import
+[W 2024-07-07 12:14:50.615 ServerApp] A `_jupyter_server_extension_points` function was not found in notebook_shim. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2024-07-07 12:14:51.403 ServerApp] Package panel.io.jupyter_server_extension took 0.7874s to import
+[I 2024-07-07 12:14:51.403 ServerApp] aext_assistant | extension was successfully linked.
+[I 2024-07-07 12:14:51.403 ServerApp] aext_core | extension was successfully linked.
+[I 2024-07-07 12:14:51.403 ServerApp] aext_panels | extension was successfully linked.
+[I 2024-07-07 12:14:51.403 ServerApp] aext_share_notebook | extension was successfully linked.
+[I 2024-07-07 12:14:51.403 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2024-07-07 12:14:51.406 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2024-07-07 12:14:51.409 ServerApp] jupyterlab | extension was successfully linked.
+[I 2024-07-07 12:14:51.412 ServerApp] notebook | extension was successfully linked.
+[I 2024-07-07 12:14:51.676 ServerApp] notebook_shim | extension was successfully linked.
+[I 2024-07-07 12:14:51.676 ServerApp] panel.io.jupyter_server_extension | extension was successfully linked.
+[I 2024-07-07 12:14:51.695 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2024-07-07 12:14:51.695 ServerApp] Registered aext_assistant server extension
+[I 2024-07-07 12:14:51.695 ServerApp] aext_assistant | extension was successfully loaded.
+[I 2024-07-07 12:14:51.695 ServerApp] Registered aext_core server extension
+[I 2024-07-07 12:14:51.695 ServerApp] aext_core | extension was successfully loaded.
+[I 2024-07-07 12:14:51.696 ServerApp] Registered aext_panels server extension
+[I 2024-07-07 12:14:51.696 ServerApp] aext_panels | extension was successfully loaded.
+[I 2024-07-07 12:14:51.697 ServerApp] Registered aext_share_notebook_server server extension
+[I 2024-07-07 12:14:51.697 ServerApp] aext_share_notebook | extension was successfully loaded.
+[I 2024-07-07 12:14:51.698 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2024-07-07 12:14:51.698 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2024-07-07 12:14:51.707 LabApp] JupyterLab extension loaded from /home/we/anaconda3/lib/python3.11/site-packages/jupyterlab
+[I 2024-07-07 12:14:51.707 LabApp] JupyterLab application directory is /home/we/anaconda3/share/jupyter/lab
+[I 2024-07-07 12:14:51.708 LabApp] Extension Manager is 'pypi'.
+[I 2024-07-07 12:14:51.710 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2024-07-07 12:14:51.713 ServerApp] notebook | extension was successfully loaded.
+[I 2024-07-07 12:14:51.714 ServerApp] panel.io.jupyter_server_extension | extension was successfully loaded.
+[I 2024-07-07 12:14:51.714 ServerApp] Serving notebooks from local directory: /home/we
+[I 2024-07-07 12:14:51.715 ServerApp] Jupyter Server 2.10.0 is running at:
+[I 2024-07-07 12:14:51.715 ServerApp] http://localhost:8888/lab?token=1180fd1f9abe42848c63a36081f9be228f9a068c32980acf
+[I 2024-07-07 12:14:51.715 ServerApp]     http://127.0.0.1:8888/lab?token=1180fd1f9abe42848c63a36081f9be228f9a068c32980acf
+[I 2024-07-07 12:14:51.715 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 2024-07-07 12:14:51.744 ServerApp] 
+    
+    To access the server, open this file in a browser:
+        file:///home/we/.local/share/jupyter/runtime/jpserver-51350-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/lab?token=1180fd1f9abe42848c63a36081f9be228f9a068c32980acf
+        http://127.0.0.1:8888/lab?token=1180fd1f9abe42848c63a36081f9be228f9a068c32980acf
+[I 2024-07-07 12:14:52.369 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+[W 2024-07-07 12:14:57.272 LabApp] Could not determine jupyterlab build status without nodejs
+[E 2024-07-07 12:14:57.571 ServerApp] Uncaught exception GET /aext_assistant_server/nucleus_token?1720340097324 (127.0.0.1)
+    HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/aext_assistant_server/nucleus_token?1720340097324', version='HTTP/1.1', remote_ip='127.0.0.1')
+    Traceback (most recent call last):
+      File "/home/we/anaconda3/lib/python3.11/site-packages/tornado/web.py", line 1786, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/home/we/anaconda3/lib/python3.11/site-packages/aext_assistant_server/handlers.py", line 114, in get
+        api_key = _load_api_key()
+                  ^^^^^^^^^^^^^^^
+      File "/home/we/anaconda3/lib/python3.11/site-packages/aext_assistant_server/handlers.py", line 41, in _load_api_key
+        _cached_api_key = TokenInfo.load(domain=config.domain).api_key
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/we/anaconda3/lib/python3.11/site-packages/anaconda_cloud_auth/token.py", line 210, in load
+        keyring_data = keyring.get_password(KEYRING_NAME, domain)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/we/anaconda3/lib/python3.11/site-packages/keyring/core.py", line 55, in get_password
+        return get_keyring().get_password(service_name, username)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/we/anaconda3/lib/python3.11/site-packages/keyring/backends/chainer.py", line 49, in get_password
+        password = keyring.get_password(service, username)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/we/anaconda3/lib/python3.11/site-packages/keyring/backends/SecretService.py", line 78, in get_password
+        collection = self.get_preferred_collection()
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/we/anaconda3/lib/python3.11/site-packages/keyring/backends/SecretService.py", line 61, in get_preferred_collection
+        collection = secretstorage.get_default_collection(bus)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/we/anaconda3/lib/python3.11/site-packages/secretstorage/collection.py", line 161, in get_default_collection
+        return Collection(connection)
+               ^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/we/anaconda3/lib/python3.11/site-packages/secretstorage/collection.py", line 44, in __init__
+        self._collection.get_property('Label')
+      File "/home/we/anaconda3/lib/python3.11/site-packages/secretstorage/util.py", line 64, in get_property
+        (signature, value), = self.send_and_get_reply(msg)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/we/anaconda3/lib/python3.11/site-packages/secretstorage/util.py", line 46, in send_and_get_reply
+        return self._connection.send_and_get_reply(msg, unwrap=True)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/we/anaconda3/lib/python3.11/site-packages/jeepney/io/blocking.py", line 190, in send_and_get_reply
+        return unwrap_msg(msg_in)
+               ^^^^^^^^^^^^^^^^^^
+      File "/home/we/anaconda3/lib/python3.11/site-packages/jeepney/wrappers.py", line 214, in unwrap_msg
+        raise DBusErrorResponse(msg)
+    jeepney.wrappers.DBusErrorResponse: [org.freedesktop.DBus.Error.NameHasNoOwner] ('Could not activate remote peer: unit failed.',)
+[W 2024-07-07 12:14:57.576 ServerApp] wrote error: 'Unhandled error'
+    Traceback (most recent call last):
+      File "/home/we/anaconda3/lib/python3.11/site-packages/tornado/web.py", line 1786, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/home/we/anaconda3/lib/python3.11/site-packages/aext_assistant_server/handlers.py", line 114, in get
+        api_key = _load_api_key()
+                  ^^^^^^^^^^^^^^^
+      File "/home/we/anaconda3/lib/python3.11/site-packages/aext_assistant_server/handlers.py", line 41, in _load_api_key
+        _cached_api_key = TokenInfo.load(domain=config.domain).api_key
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/we/anaconda3/lib/python3.11/site-packages/anaconda_cloud_auth/token.py", line 210, in load
+        keyring_data = keyring.get_password(KEYRING_NAME, domain)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/we/anaconda3/lib/python3.11/site-packages/keyring/core.py", line 55, in get_password
+        return get_keyring().get_password(service_name, username)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/we/anaconda3/lib/python3.11/site-packages/keyring/backends/chainer.py", line 49, in get_password
+        password = keyring.get_password(service, username)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/we/anaconda3/lib/python3.11/site-packages/keyring/backends/SecretService.py", line 78, in get_password
+        collection = self.get_preferred_collection()
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/we/anaconda3/lib/python3.11/site-packages/keyring/backends/SecretService.py", line 61, in get_preferred_collection
+        collection = secretstorage.get_default_collection(bus)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/we/anaconda3/lib/python3.11/site-packages/secretstorage/collection.py", line 161, in get_default_collection
+        return Collection(connection)
+               ^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/we/anaconda3/lib/python3.11/site-packages/secretstorage/collection.py", line 44, in __init__
+        self._collection.get_property('Label')
+      File "/home/we/anaconda3/lib/python3.11/site-packages/secretstorage/util.py", line 64, in get_property
+        (signature, value), = self.send_and_get_reply(msg)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/we/anaconda3/lib/python3.11/site-packages/secretstorage/util.py", line 46, in send_and_get_reply
+        return self._connection.send_and_get_reply(msg, unwrap=True)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/we/anaconda3/lib/python3.11/site-packages/jeepney/io/blocking.py", line 190, in send_and_get_reply
+        return unwrap_msg(msg_in)
+               ^^^^^^^^^^^^^^^^^^
+      File "/home/we/anaconda3/lib/python3.11/site-packages/jeepney/wrappers.py", line 214, in unwrap_msg
+        raise DBusErrorResponse(msg)
+    jeepney.wrappers.DBusErrorResponse: [org.freedesktop.DBus.Error.NameHasNoOwner] ('Could not activate remote peer: unit failed.',)
+[E 2024-07-07 12:14:57.577 ServerApp] {
+      "Host": "localhost:8888",
+      "Accept": "*/*",
+      "Referer": "http://localhost:8888/lab",
+      "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:127.0) Gecko/20100101 Firefox/127.0"
+    }
+[E 2024-07-07 12:14:57.577 ServerApp] 500 GET /aext_assistant_server/nucleus_token?1720340097324 (dcd8ec26d62140128f12aef639de6451@127.0.0.1) 175.31ms referer=http://localhost:8888/lab
+[I 2024-07-07 12:15:00.724 ServerApp] Kernel started: 1591d07a-8824-4b4b-bf06-a982567fc1a7
+[I 2024-07-07 12:15:00.729 ServerApp] Kernel started: 65824324-0ab3-435d-bf14-47c4d63849e0
+[I 2024-07-07 12:15:00.733 ServerApp] Kernel started: 7465d625-bf34-4580-affa-47a0202b4984
+[I 2024-07-07 12:15:00.735 ServerApp] Kernel started: 7bf5f6af-3ee8-425e-90d0-6edc93e2dbd6
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+[W 2024-07-07 12:15:02.408 LabApp] Could not determine jupyterlab build status without nodejs
+[E 2024-07-07 12:15:02.573 ServerApp] Uncaught exception GET /aext_assistant_server/nucleus_token?1720340102490 (127.0.0.1)
+    HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/aext_assistant_server/nucleus_token?1720340102490', version='HTTP/1.1', remote_ip='127.0.0.1')
+    Traceback (most recent call last):
+      File "/home/we/anaconda3/lib/python3.11/site-packages/tornado/web.py", line 1786, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/home/we/anaconda3/lib/python3.11/site-packages/aext_assistant_server/handlers.py", line 114, in get
+        api_key = _load_api_key()
+                  ^^^^^^^^^^^^^^^
+      File "/home/we/anaconda3/lib/python3.11/site-packages/aext_assistant_server/handlers.py", line 41, in _load_api_key
+        _cached_api_key = TokenInfo.load(domain=config.domain).api_key
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/we/anaconda3/lib/python3.11/site-packages/anaconda_cloud_auth/token.py", line 210, in load
+        keyring_data = keyring.get_password(KEYRING_NAME, domain)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/we/anaconda3/lib/python3.11/site-packages/keyring/core.py", line 55, in get_password
+        return get_keyring().get_password(service_name, username)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/we/anaconda3/lib/python3.11/site-packages/keyring/backends/chainer.py", line 49, in get_password
+        password = keyring.get_password(service, username)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/we/anaconda3/lib/python3.11/site-packages/keyring/backends/SecretService.py", line 78, in get_password
+        collection = self.get_preferred_collection()
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/we/anaconda3/lib/python3.11/site-packages/keyring/backends/SecretService.py", line 61, in get_preferred_collection
+        collection = secretstorage.get_default_collection(bus)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/we/anaconda3/lib/python3.11/site-packages/secretstorage/collection.py", line 161, in get_default_collection
+        return Collection(connection)
+               ^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/we/anaconda3/lib/python3.11/site-packages/secretstorage/collection.py", line 44, in __init__
+        self._collection.get_property('Label')
+      File "/home/we/anaconda3/lib/python3.11/site-packages/secretstorage/util.py", line 64, in get_property
+        (signature, value), = self.send_and_get_reply(msg)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/we/anaconda3/lib/python3.11/site-packages/secretstorage/util.py", line 46, in send_and_get_reply
+        return self._connection.send_and_get_reply(msg, unwrap=True)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/we/anaconda3/lib/python3.11/site-packages/jeepney/io/blocking.py", line 190, in send_and_get_reply
+        return unwrap_msg(msg_in)
+               ^^^^^^^^^^^^^^^^^^
+      File "/home/we/anaconda3/lib/python3.11/site-packages/jeepney/wrappers.py", line 214, in unwrap_msg
+        raise DBusErrorResponse(msg)
+    jeepney.wrappers.DBusErrorResponse: [org.freedesktop.DBus.Error.NameHasNoOwner] ('Could not activate remote peer: unit failed.',)
+[W 2024-07-07 12:15:02.574 ServerApp] wrote error: 'Unhandled error'
+    Traceback (most recent call last):
+      File "/home/we/anaconda3/lib/python3.11/site-packages/tornado/web.py", line 1786, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/home/we/anaconda3/lib/python3.11/site-packages/aext_assistant_server/handlers.py", line 114, in get
+        api_key = _load_api_key()
+                  ^^^^^^^^^^^^^^^
+      File "/home/we/anaconda3/lib/python3.11/site-packages/aext_assistant_server/handlers.py", line 41, in _load_api_key
+        _cached_api_key = TokenInfo.load(domain=config.domain).api_key
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/we/anaconda3/lib/python3.11/site-packages/anaconda_cloud_auth/token.py", line 210, in load
+        keyring_data = keyring.get_password(KEYRING_NAME, domain)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/we/anaconda3/lib/python3.11/site-packages/keyring/core.py", line 55, in get_password
+        return get_keyring().get_password(service_name, username)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/we/anaconda3/lib/python3.11/site-packages/keyring/backends/chainer.py", line 49, in get_password
+        password = keyring.get_password(service, username)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/we/anaconda3/lib/python3.11/site-packages/keyring/backends/SecretService.py", line 78, in get_password
+        collection = self.get_preferred_collection()
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/we/anaconda3/lib/python3.11/site-packages/keyring/backends/SecretService.py", line 61, in get_preferred_collection
+        collection = secretstorage.get_default_collection(bus)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/we/anaconda3/lib/python3.11/site-packages/secretstorage/collection.py", line 161, in get_default_collection
+        return Collection(connection)
+               ^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/we/anaconda3/lib/python3.11/site-packages/secretstorage/collection.py", line 44, in __init__
+        self._collection.get_property('Label')
+      File "/home/we/anaconda3/lib/python3.11/site-packages/secretstorage/util.py", line 64, in get_property
+        (signature, value), = self.send_and_get_reply(msg)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/we/anaconda3/lib/python3.11/site-packages/secretstorage/util.py", line 46, in send_and_get_reply
+        return self._connection.send_and_get_reply(msg, unwrap=True)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/we/anaconda3/lib/python3.11/site-packages/jeepney/io/blocking.py", line 190, in send_and_get_reply
+        return unwrap_msg(msg_in)
+               ^^^^^^^^^^^^^^^^^^
+      File "/home/we/anaconda3/lib/python3.11/site-packages/jeepney/wrappers.py", line 214, in unwrap_msg
+        raise DBusErrorResponse(msg)
+    jeepney.wrappers.DBusErrorResponse: [org.freedesktop.DBus.Error.NameHasNoOwner] ('Could not activate remote peer: unit failed.',)
+[E 2024-07-07 12:15:02.575 ServerApp] {
+      "Host": "localhost:8888",
+      "Accept": "*/*",
+      "Referer": "http://localhost:8888/lab/workspaces/auto-t/tree/Lab/ensemble.ipynb",
+      "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:127.0) Gecko/20100101 Firefox/127.0"
+    }
+[E 2024-07-07 12:15:02.575 ServerApp] 500 GET /aext_assistant_server/nucleus_token?1720340102490 (dcd8ec26d62140128f12aef639de6451@127.0.0.1) 29.40ms referer=http://localhost:8888/lab/workspaces/auto-t/tree/Lab/ensemble.ipynb
+[I 2024-07-07 12:15:04.272 ServerApp] Connecting to kernel 7bf5f6af-3ee8-425e-90d0-6edc93e2dbd6.
+[I 2024-07-07 12:15:04.288 ServerApp] Kernel started: 39fd528b-dda7-4d3f-8510-cd8bd46301e3
+[I 2024-07-07 12:15:04.297 ServerApp] Kernel started: 84343bfe-b03b-41b6-9270-6bc1b2cd83b8
+[I 2024-07-07 12:15:04.392 ServerApp] Starting buffering for 7bf5f6af-3ee8-425e-90d0-6edc93e2dbd6:460d6852-a965-44f7-82ff-3e5501866d24
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+[I 2024-07-07 12:15:04.807 ServerApp] Connecting to kernel 84343bfe-b03b-41b6-9270-6bc1b2cd83b8.
+[I 2024-07-07 12:15:04.973 ServerApp] Starting buffering for 84343bfe-b03b-41b6-9270-6bc1b2cd83b8:eb887a11-7781-42de-b0f8-372bd406dd52
+[I 2024-07-07 12:15:04.975 ServerApp] Connecting to kernel 39fd528b-dda7-4d3f-8510-cd8bd46301e3.
+[I 2024-07-07 12:15:04.993 ServerApp] Connecting to kernel 84343bfe-b03b-41b6-9270-6bc1b2cd83b8.
+[I 2024-07-07 12:15:15.740 ServerApp] Starting buffering for 84343bfe-b03b-41b6-9270-6bc1b2cd83b8:c901ffe8-27bf-408f-8bff-3057f6974ae9
+[I 2024-07-07 12:15:17.183 ServerApp] Starting buffering for 39fd528b-dda7-4d3f-8510-cd8bd46301e3:965731a1-d876-4243-bfda-d03fa07f4275
+[I 2024-07-07 12:15:18.067 ServerApp] Creating new notebook in /Lab
+[I 2024-07-07 12:15:18.670 ServerApp] Kernel started: 995d9d65-fc8f-4e1e-86cb-d603677835c6
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+[I 2024-07-07 12:15:19.234 ServerApp] Connecting to kernel 995d9d65-fc8f-4e1e-86cb-d603677835c6.
+[I 2024-07-07 12:17:18.488 ServerApp] Saving file at /Lab/dimesions.ipynb
+[I 2024-07-07 12:19:18.531 ServerApp] Saving file at /Lab/dimesions.ipynb
+[I 2024-07-07 12:21:19.170 ServerApp] Saving file at /Lab/dimesions.ipynb
+[I 2024-07-07 12:23:20.005 ServerApp] Saving file at /Lab/dimesions.ipynb
+[I 2024-07-07 12:25:21.016 ServerApp] Saving file at /Lab/dimesions.ipynb
+[I 2024-07-07 12:27:21.517 ServerApp] Saving file at /Lab/dimesions.ipynb
+[I 2024-07-07 12:29:21.551 ServerApp] Saving file at /Lab/dimesions.ipynb
+[I 2024-07-07 12:31:21.776 ServerApp] Saving file at /Lab/dimesions.ipynb
+[I 2024-07-07 12:33:23.069 ServerApp] Saving file at /Lab/dimesions.ipynb
+[I 2024-07-07 12:35:23.214 ServerApp] Saving file at /Lab/dimesions.ipynb
+[I 2024-07-07 12:45:23.313 ServerApp] Saving file at /Lab/dimesions.ipynb
+[I 2024-07-07 12:51:23.368 ServerApp] Saving file at /Lab/dimesions.ipynb
+[I 2024-07-07 12:53:23.426 ServerApp] Saving file at /Lab/dimesions.ipynb
+[I 2024-07-07 13:03:26.833 ServerApp] Saving file at /Lab/dimesions.ipynb
+[I 2024-07-07 13:05:27.431 ServerApp] Saving file at /Lab/dimesions.ipynb
+[I 2024-07-07 13:07:28.336 ServerApp] Saving file at /Lab/dimesions.ipynb
+[I 2024-07-07 13:09:28.391 ServerApp] Saving file at /Lab/dimesions.ipynb
+[I 2024-07-07 13:11:29.387 ServerApp] Saving file at /Lab/dimesions.ipynb
+[I 2024-07-07 13:13:29.458 ServerApp] Saving file at /Lab/dimesions.ipynb
+[I 2024-07-07 13:15:29.829 ServerApp] Saving file at /Lab/dimesions.ipynb
+[I 2024-07-07 13:17:30.204 ServerApp] Saving file at /Lab/dimesions.ipynb
+[I 2024-07-07 13:21:30.346 ServerApp] Saving file at /Lab/dimesions.ipynb
+[I 2024-07-07 13:23:30.453 ServerApp] Saving file at /Lab/dimesions.ipynb
+[I 2024-07-07 13:25:30.498 ServerApp] Saving file at /Lab/dimesions.ipynb
+[I 2024-07-07 13:27:30.563 ServerApp] Saving file at /Lab/dimesions.ipynb
+[I 2024-07-07 13:29:31.302 ServerApp] Saving file at /Lab/dimesions.ipynb
+[I 2024-07-07 13:31:31.357 ServerApp] Saving file at /Lab/dimesions.ipynb
+[I 2024-07-07 13:33:31.698 ServerApp] Saving file at /Lab/dimesions.ipynb
+[I 2024-07-07 13:35:31.744 ServerApp] Saving file at /Lab/dimesions.ipynb
+[I 2024-07-07 13:39:32.024 ServerApp] Saving file at /Lab/dimesions.ipynb
+[I 2024-07-07 13:41:32.065 ServerApp] Saving file at /Lab/dimesions.ipynb
+[I 2024-07-07 13:45:33.254 ServerApp] Saving file at /Lab/dimesions.ipynb
+[I 2024-07-07 14:03:35.135 ServerApp] Saving file at /Lab/dimesions.ipynb
+[I 2024-07-07 14:05:35.467 ServerApp] Saving file at /Lab/dimesions.ipynb
+[I 2024-07-07 14:07:35.546 ServerApp] Saving file at /Lab/dimesions.ipynb
+[I 2024-07-07 14:09:35.913 ServerApp] Saving file at /Lab/dimesions.ipynb
+[I 2024-07-07 14:11:35.995 ServerApp] Saving file at /Lab/dimesions.ipynb
+[I 2024-07-07 14:13:36.072 ServerApp] Saving file at /Lab/dimesions.ipynb
+[I 2024-07-07 14:15:36.229 ServerApp] Saving file at /Lab/dimesions.ipynb
+[I 2024-07-07 14:17:37.315 ServerApp] Saving file at /Lab/dimesions.ipynb
+[I 2024-07-07 14:19:38.149 ServerApp] Saving file at /Lab/dimesions.ipynb
+[I 2024-07-07 14:23:38.324 ServerApp] Saving file at /Lab/dimesions.ipynb
+[I 2024-07-07 14:25:38.646 ServerApp] Saving file at /Lab/dimesions.ipynb
+[I 2024-07-07 14:27:38.739 ServerApp] Saving file at /Lab/dimesions.ipynb
+[I 2024-07-07 14:29:39.306 ServerApp] Saving file at /Lab/dimesions.ipynb
+[I 2024-07-07 14:31:39.983 ServerApp] Saving file at /Lab/dimesions.ipynb
+[I 2024-07-07 18:39:28.574 ServerApp] Saving file at /Lab/dimesions.ipynb
+[I 2024-07-07 22:41:47.213 ServerApp] Starting buffering for 995d9d65-fc8f-4e1e-86cb-d603677835c6:28120c59-bdba-4dbb-aa1b-b1f812e73218
+[I 2024-07-07 22:41:49.180 ServerApp] Creating new notebook in /Lab
+[I 2024-07-07 22:41:49.627 ServerApp] Kernel started: 44d9e42c-10a1-44a8-ac08-090788577a3b
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+[I 2024-07-07 22:41:50.816 ServerApp] Connecting to kernel 44d9e42c-10a1-44a8-ac08-090788577a3b.
+[I 2024-07-07 22:43:50.121 ServerApp] Saving file at /Lab/Untitled.ipynb
+[I 2024-07-08 15:29:44.627 ServerApp] Connecting to kernel 995d9d65-fc8f-4e1e-86cb-d603677835c6.
+
